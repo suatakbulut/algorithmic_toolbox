@@ -16,6 +16,12 @@ def get_fibonacci_huge_naive(n, m):
 
 def get_fibonacci_huge_efficient(n, m):
     """
+    Let S be the largest list of N numbers such that 
+       S[i] = fib(i) % m and S[i] > 0 for all i>0. 
+    Observe that N+i'th fibonacci number modulo m will 
+    simply be S[-1] * S[i]. Using this logic, we can construct 
+    the following matrix and use it to solve this problem
+
     r=0  r=1      r=2      r=3     r=4    ... r= N
     ==============================================================
     0     1        1        2       3     ... f_S      d = 0   (S)
